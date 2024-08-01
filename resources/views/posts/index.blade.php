@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     
     </head>
-    <body class="antialiased">
+    <x-app-layout>
         <h1>Blog Name</h1>
         <a href='/posts/create'>create</a>
         <div class='posts'>
@@ -24,6 +24,11 @@
                     </form>
                 </div>
             @endforeach
+            @if(Auth::check())
+                <p>Welcome, {{ Auth::user()->name }}!</p>
+            @else
+                <p>Welcome, Guest!</p>
+            @endif
         </div>
         <div class='paginate'>{{ $posts->links() }}</div>
         <script>
@@ -35,5 +40,5 @@
                } 
             }
         </script>
-    </body>
+    </x-app-layout>
 </html>

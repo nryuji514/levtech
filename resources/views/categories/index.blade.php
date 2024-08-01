@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     
     </head>
-    <body class="antialiased">
+    <x-app-layout>
         <h1>Blog Name</h1>
         <a href='/posts/create'>create</a>
         <div class='posts'>
@@ -38,5 +38,5 @@
          <div class="footer">
             <a href="/">戻る</a>
         </div>
-    </body>
+    </x-app-layout>
 </html>
