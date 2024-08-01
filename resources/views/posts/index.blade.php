@@ -24,6 +24,13 @@
                     </form>
                 </div>
             @endforeach
+            @foreach($questions as $question)
+            <div>
+                <a href="https://teratail.com/questions/{{ $question['id'] }}">
+                    {{ $question['title'] }}
+                </a>
+            </div>
+            @endforeach
             @if(Auth::check())
                 <p>Welcome, {{ Auth::user()->name }}!</p>
             @else
